@@ -1,0 +1,22 @@
+{
+  "name": "angular-instagram",
+  "version": "0.0.0",
+  "authors": [
+    "Jeremy Feinstein <jfeinstein10@gmail.com>"
+  ],
+  "description": "An Angular.js mock-up of Instagram",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.1",
+    "angular-material": "~0.5.1",
+    "angular-ui-router": "~0.2.11",
+    "bootstrap-material-design": "~0.1.5"
+  }
+}
