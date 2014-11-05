@@ -1,0 +1,94 @@
+html, body, md-content.body {
+  background-color: rgb(237, 238, 239);
+}
+
+a {
+  text-decoration: none;
+  color: #3f729b;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  padding-top: 64px;
+}
+
+md-toolbar.md-default-theme {
+  background-color: rgb(81, 127, 164);
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+}
+
+md-card {
+  background-color: #fff;
+}
+
+.md-fab md-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 0px;
+}
+
+.timeline-post {
+  padding-bottom: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.timeline-label {
+  text-align: right;
+}
+
+.timeline-photo {
+  margin: 16px;
+  padding: 0px;
+}
+
+.timeline-user-image {
+  width: 58px;
+  height: 58px;
+  margin: 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.timeline-comment {
+  padding: 8px;
+  padding-bottom: 0px;
+}
+
+.timeline-comment-like-row {
+  background-color: rgb(237, 238, 239);
+  padding: 8px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-comment-image {
+  width: 28px;
+  height: 28px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-right: 10px;
+}
+
+.timeline-comment-text {
+  margin: 0px;
+}
+
+.timeline-new-comment {
+  padding: 0px 8px 20px 8px;
+  margin: 0px;
+}
+
+.timeline-photo-image {
+  width: 100%;
+  height: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

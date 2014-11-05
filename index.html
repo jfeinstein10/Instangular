@@ -2,20 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Angugram</title>
+	<title>Instangular</title>
 
   <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-material/themes/blue-grey-theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
+</head>
+<body ng-app="Instangular">
+
+  <md-toolbar ng-controller="ToolbarCtrl" class="md-whiteframe-z1" layout="horizontal">
+    <div class="md-toolbar-tools">
+      <span flex="5" flex-lg="20" flex-md="10"></span>
+      <span><a ui-sref="home"><b>Instangular</b></a></span>
+      <span flex></span>
+      <span><a ui-sref="profile">Jeremy Feinstein</a></span>
+      <md-button aria-label="compose" ng-click="compose()" class="md-fab md-button-colored" style="position: relative; top: 28px; background-color: #fff">
+        <md-icon icon="bower_components/material-design-icons/content/svg/ic_create_24px.svg"></md-icon>
+      </md-button>
+      <span flex="5" flex-lg="20" flex-md="10"></span>
+    </div>
+  </md-toolbar>
+
+  <div ui-view></div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
   <script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+  <script type="text/javascript" src="bower_components/hammerjs/hammer.js"></script>
   <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
   <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-</head>
-<body>
-
-  Hello World
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/common/controllers/ToolbarCtrl.js"></script>
+  <script type="text/javascript" src="app/common/directives/square.js"></script>
+  <script type="text/javascript" src="app/common/services/backend.js"></script>
+  <script type="text/javascript" src="app/home/controllers/TimelineCtrl.js"></script>
+  <script type="text/javascript" src="app/profile/controllers/ProfileCtrl.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,41 @@
+<md-content class="body" flex="90" offset="5" flex-lg="60" offset-lg="20" flex-md="80" offset-md="10">
+  <md-list>
+    <md-item ng-repeat="post in timeline" class="timeline-post" layout="vertical" layout-sm="horizontal">
+      <div class="timeline-label" layout="horizontal">
+        <div flex>
+          <p><a ui-sref="profile"><b>{{ post.user }}</b></a><br>{{ post.time }} minutes ago</p>
+        </div>
+        <div class="timeline-user-image md-whiteframe-z1" style="background-image: url({{ post.userImage }});" alt="{{ post.user }}"></div>
+      </div>
+      <md-card class="timeline-photo md-whiteframe-z2" flex>
+        <div square class="timeline-photo-image" style="background-image: url({{ post.imageUrl }});"></div>
+        <md-list>
+          <md-item>
+            <div class="timeline-comment-like-row" layout="horizontal">
+              <md-button aria-label="like" ng-click="likePost(post)" class="md-fab" style="margin-right: 8px;">
+                <md-icon icon="bower_components/material-design-icons/action/svg/ic_thumb_up_24px.svg"></md-icon>
+              </md-button>
+              <p ng-if="post.like">You and {{ post.numLikes }} others like this</p>
+              <p ng-if="!post.like">{{ post.numLikes }} people like this</p>
+            </div>
+          </md-item>
+          <md-item>
+            {{ post.caption }}
+          </md-item>
+          <md-item ng-repeat="comment in post.comments">
+            <div class="timeline-comment" layout="horizontal">
+              <div class="timeline-comment-image" style="background-image: url({{ comment.userImage }});"></div>
+              <p class="timeline-comment-text"><a ui-sref="profile"><b>{{ comment.user }}</b></a> {{ comment.text }}</p>
+            </div>
+          </md-item>
+          <md-item>
+            <div layout="horizontal" layout-align="start center">
+              <md-text-float class="timeline-new-comment" label="Write a comment..." ng-model="post.newComment"></md-text-float>
+              <md-button aria-label="comment" ng-click="addNewComment(post)" class="md-raised">Submit</md-button>
+            </div>
+          </md-item>
+        </md-list>
+      </md-card>
+    </md-item>
+  </md-list>
+</md-content>
