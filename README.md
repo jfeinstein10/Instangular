@@ -7,3 +7,4 @@ Instangular
 
 ### Running
 * I like to run this with a Python static file (`python -m SimpleHTTPServer 8000`) in the base directory
+* In your browser, go to `localhost:8000` to see `index.html`
